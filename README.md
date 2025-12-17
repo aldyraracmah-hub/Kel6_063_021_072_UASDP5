@@ -1,5 +1,5 @@
 Kelompok 6 
-Projek : Cinema Cashier MAX
+Projek : Reservasi Bioskop
 Anggota : 
 -	Aldyra Siti Rachmah (251401063)
 -	Ika Safira Nasution (251401021)
