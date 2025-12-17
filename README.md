@@ -11,7 +11,8 @@ Pekerjaan kasir yang awalnya dilakukan manual seperti memeriksa ketersediaan ban
 Berangkat dari permasalahan itu kami membuat program yang dapat menginput film di sistem dan fitur menampilkan film, pemesanan tiket, dan cetak tiket.
 Fitur-fitur inilah yang diharapkan dapat membantu pekerjaan seorang kasir untuk meminimalisir kesalahan akibat kekeliruan.
 
-Link Dokumentasu Drive : 
+Link Dokumentasi Drive : 
 https://drive.google.com/drive/folders/1CqwUzXs412QA7T30S2pMv2RNkXYKDROW 
 
-Link Youtube
+Link Youtube : 
+
