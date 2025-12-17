@@ -30,7 +30,7 @@ type
         harga       : longint;
     end;
 
-    // Array 2 dimensi untuk kursi studio
+    // Array 2 dimensi untuk menampilkan status kursi studio
     KursiStudio = array[1..Baris,1..Kolom] of integer;
 
 var
@@ -44,30 +44,27 @@ procedure InputFilm;
 var
     i, j: integer;
 begin
-    clrscr;
     writeln('INPUT FILM');
     write('Berapa film ingin diinput (maks ', MaxFilm, ')? ');
     readln(totalFilm);
     if totalFilm > MaxFilm then totalFilm := MaxFilm;
-
-    for i := 1 to totalFilm do
-    begin
-        writeln;
-        writeln('Film ke-', i);
-        write('Judul Film    : '); readln(Film[i].judul);
-        write('Genre         : '); readln(Film[i].genre);
-        write('Jumlah jadwal (maks ', MaxJadwal, '): ');
-        readln(Film[i].jumlahJadwal);
-
-        if Film[i].jumlahJadwal > MaxJadwal then
-            Film[i].jumlahJadwal := MaxJadwal;
-
-        for j := 1 to Film[i].jumlahJadwal do
+        for i := 1 to totalFilm do
         begin
-            write('   Jadwal ke-', j, ' : ');
-            readln(Film[i].jadwal[j]);
+            writeln;
+            writeln('Film ke-', i);
+            write('Judul Film    : '); readln(Film[i].judul);
+            write('Genre         : '); readln(Film[i].genre);
+            write('Jumlah jadwal (maks ', MaxJadwal, '): ');
+            readln(Film[i].jumlahJadwal);
+    
+            if Film[i].jumlahJadwal > MaxJadwal then
+                Film[i].jumlahJadwal := MaxJadwal;
+                    for j := 1 to Film[i].jumlahJadwal do
+                        begin
+                            write('   Jadwal ke-', j, ' : ');
+                            readln(Film[i].jadwal[j]);
+                        end;
         end;
-    end;
 end;
 
 // Prosedur untuk menampilkan daftar film
@@ -75,7 +72,6 @@ procedure TampilFilm;
 var
     i, j: integer;
 begin
-    clrscr;
     writeln('DAFTAR FILM');
     writeln;
 
@@ -105,17 +101,15 @@ begin
     writeln('LAYAR');
     write('     ');
     for x := 1 to Kolom do write(x:3); // Nomor kolom
-    writeln;
-
-    for y := 1 to Baris do
-    begin
-        write('A', y, ' | ');
-        for x := 1 to Kolom do
-            if Kursi[y,x] = Kosong then write('O':3)
-            else write('X':3);
         writeln;
-    end;
-
+            for y := 1 to Baris do
+            begin
+                write('A', y, ' | ');
+                for x := 1 to Kolom do
+                    if Kursi[y,x] = Kosong then write('O':3)
+                    else write('X':3);
+                writeln;
+            end;
     writeln('O = Kosong , X = Terisi');
 end;
 
@@ -128,8 +122,6 @@ var
     lagi: char;
 begin
     repeat
-        clrscr;
-
         if totalFilm = 0 then
         begin
             writeln('Belum ada film!');
@@ -141,16 +133,15 @@ begin
         writeln('DAFTAR FILM');
         for i := 1 to totalFilm do
             writeln(i, '. ', Film[i].judul);
-
-        write('Pilih nomor film: ');
-        readln(pilihFilm);
+            write('Pilih nomor film: ');
+            readln(pilihFilm);
 
         if (pilihFilm < 1) or (pilihFilm > totalFilm) then
-        begin
-            writeln('Pilihan tidak valid!');
-            readln;
-            exit;
-        end;
+            begin
+                writeln('Pilihan tidak valid!');
+                readln;
+                exit;
+            end;
 
         // Tampilkan jadwal
         writeln('DAFTAR JADWAL');
@@ -267,7 +258,6 @@ var
     i: integer;
     totalHarga: longint;
 begin
-    clrscr;
     totalHarga := 0;
 
     if totalTiket = 0 then
@@ -311,7 +301,6 @@ begin
 
     // Menu utama
     repeat
-        clrscr;
         writeln('SISTEM RESERVASI BIOSKOP');
         writeln('1. Input Film');
         writeln('2. Tampilkan Film');
@@ -333,3 +322,4 @@ begin
         end;
     until pilih = 5;
 end.
+
