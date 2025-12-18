@@ -14,6 +14,6 @@ Fitur-fitur inilah yang diharapkan dapat membantu pekerjaan seorang kasir untuk 
 Link Dokumentasi Drive : 
 https://drive.google.com/drive/folders/1CqwUzXs412QA7T30S2pMv2RNkXYKDROW 
 
-Link Youtube : 
+Link Youtube :
 https://youtu.be/R4pCCRglgn4?si=zKlHbaPMiPupG82w
 
